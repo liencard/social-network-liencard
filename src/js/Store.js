@@ -8,6 +8,10 @@ class Store {
     this.messages = [];
   }
 
+  seed(data) {
+    this.messages = data;
+  }
+
   addMessage(content) {
     this.messages.push(new Message({content, user: 1}));
   }
@@ -20,7 +24,8 @@ class Store {
 decorate(Store, {
   messages: observable,
   addMessage: action,
-  unreadLength: computed
+  unreadLength: computed,
+  seed: action
 });
 
 export default Store;
