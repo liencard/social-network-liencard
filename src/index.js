@@ -3,14 +3,14 @@ import Store from './js/Store';
 import Message from './js/Message';
 import {autorun} from 'mobx';
 
-const renderUnread = ({unreadLength}) => {
+const renderUnread = unreadLength => {
   document.querySelector('.unread').textContent = unreadLength > 0 ? `${unreadLength} unread message${unreadLength > 1 ? 's' : ''}` : '';
 };
 
-const renderMessages = store => {
+const renderMessages = messages => {
   const $list = document.querySelector('.list');
   $list.innerHTML = '';
-  store.messages.forEach(message => {
+  messages.forEach(message => {
     $list.appendChild(createMessage(message));
   });
 };
@@ -41,8 +41,8 @@ const handleFormSubmit = (e, store) => {
 const init = () => {
   const store = new Store();
   autorun(() => {
-    renderMessages(store);
-    renderUnread(store);
+    renderMessages(store.messages);
+    renderUnread(store.unreadLength);
   });
 
   store.messages.push(new Message({content: 'Hey', user: 2}));
