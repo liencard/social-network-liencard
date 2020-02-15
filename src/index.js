@@ -1,6 +1,7 @@
 import './style.css';
 import Store from './js/Store';
 import Message from './js/Message';
+import {autorun} from 'mobx';
 
 const renderUnread = ({unreadLength}) => {
   document.querySelector('.unread').textContent = unreadLength > 0 ? `${unreadLength} unread message${unreadLength > 1 ? 's' : ''}` : '';
@@ -42,6 +43,10 @@ const handleFormSubmit = (e, store) => {
 
 const init = () => {
   const store = new Store();
+  autorun(() => {
+    renderMessages(store);
+    renderUnread(store);
+  });
 
   store.messages.push(new Message({content: 'Hey', user: 2}));
   store.messages.push(new Message({content: 'Joow', user: 1}));
