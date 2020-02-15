@@ -1,4 +1,5 @@
 import Message from './Message';
+import {decorate, observable, action, computed} from 'mobx';
 
 class Store {
 
@@ -14,5 +15,11 @@ class Store {
     return this.messages.filter(message => message.unread).length;
   }
 }
+
+decorate(Store, {
+  messages: observable,
+  addMessage: action,
+  unreadLength: computed
+});
 
 export default Store;
