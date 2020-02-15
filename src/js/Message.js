@@ -1,3 +1,5 @@
+import {decorate, observable, action} from 'mobx';
+
 class Message {
 
   constructor({content, user, unread = false}) {
@@ -6,5 +8,10 @@ class Message {
     this.unread = unread;
   }
 }
+
+decorate(Message, {
+  unread: observable,
+  setUnread: action
+});
 
 export default Message;
