@@ -21,13 +21,10 @@ const createMessage = message => {
     message.unread ? 'bubble--unread' : 'bubble--read',
     message.user === 1 ? 'bubble--right' : 'bubble--left');
   $li.textContent = message.content;
-  $li.addEventListener('click', () => setAsRead(message));
+  $li.addEventListener('click', () => message.setUnread(false));
   return $li;
 };
 
-const setAsRead = message => {
-  message.setUnread(false);
-};
 
 const handleFormSubmit = (e, store) => {
   e.preventDefault();
