@@ -6,6 +6,7 @@ class Store {
 
   constructor() {
     this.messages = [];
+    //this.counter = 0;
   }
 
   seed(data) {
@@ -18,6 +19,7 @@ class Store {
   }
 
   get unreadLength() {
+    //this.counter ++;
     return this.messages.filter(message => message.unread).length;
   }
 }
