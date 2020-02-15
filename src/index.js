@@ -11,21 +11,21 @@ const renderMessages = store => {
   const $list = document.querySelector('.list');
   $list.innerHTML = '';
   store.messages.forEach(message => {
-    $list.appendChild(createMessage(message, store));
+    $list.appendChild(createMessage(message));
   });
 };
 
-const createMessage = (message, store) => {
+const createMessage = message => {
   const $li = document.createElement('li');
   $li.classList.add('bubble',
     message.unread ? 'bubble--unread' : 'bubble--read',
     message.user === 1 ? 'bubble--right' : 'bubble--left');
   $li.textContent = message.content;
-  $li.addEventListener('click', () => setAsRead(message, store));
+  $li.addEventListener('click', () => setAsRead(message));
   return $li;
 };
 
-const setAsRead = (message, store) => {
+const setAsRead = message => {
   message.unread = false;
 };
 
