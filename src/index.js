@@ -27,8 +27,6 @@ const createMessage = (message, store) => {
 
 const setAsRead = (message, store) => {
   message.unread = false;
-  renderMessages(store);
-  renderUnread(store);
 };
 
 const handleFormSubmit = (e, store) => {
@@ -37,7 +35,6 @@ const handleFormSubmit = (e, store) => {
   if (content) {
     store.addMessage(content);
     e.currentTarget.reset();
-    renderMessages(store);
   }
 };
 
@@ -54,9 +51,6 @@ const init = () => {
   store.messages.push(new Message({content: 'Lang niet gezien', user: 2, unread: true}));
 
   window.store = store;
-
-  renderMessages(store);
-  renderUnread(store);
 
   const $form = document.querySelector('form');
   $form.addEventListener('submit', e => handleFormSubmit(e, store));
