@@ -7,6 +7,11 @@ class Message {
     this.user = user;
     this.unread = unread;
   }
+
+  setUnread(value) {
+    this.unread = value;
+  }
+
 }
 
 decorate(Message, {

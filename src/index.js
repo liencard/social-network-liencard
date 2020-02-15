@@ -26,7 +26,7 @@ const createMessage = message => {
 };
 
 const setAsRead = message => {
-  message.unread = false;
+  message.setUnread(false);
 };
 
 const handleFormSubmit = (e, store) => {
