@@ -1,6 +1,7 @@
 import Message from './Message';
-import {decorate, observable, action, computed} from 'mobx';
+import {decorate, observable, action, computed, configure} from 'mobx';
 
+configure({enforceActions: 'observed'});
 class Store {
 
   constructor() {
