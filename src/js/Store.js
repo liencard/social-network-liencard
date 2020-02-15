@@ -9,7 +9,8 @@ class Store {
   }
 
   seed(data) {
-    this.messages = data;
+    //this.messages = data;
+    this.messages.push(...data);
   }
 
   addMessage(content) {
