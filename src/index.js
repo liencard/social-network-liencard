@@ -45,10 +45,10 @@ const init = () => {
     renderUnread(store.unreadLength);
   });
 
-  store.messages.push(new Message({content: 'Hey', user: 2}));
-  store.messages.push(new Message({content: 'Joow', user: 1}));
-  store.messages.push(new Message({content: 'Hoe is het?', user: 2, unread: true}));
-  store.messages.push(new Message({content: 'Lang niet gezien', user: 2, unread: true}));
+  store.seed([new Message({content: 'Hey', user: 2}),
+    new Message({content: 'Joow', user: 1}),
+    new Message({content: 'Hoe is het?', user: 2, unread: true}),
+    new Message({content: 'Lang niet gezien', user: 2, unread: true})]);
 
   window.store = store;
 
