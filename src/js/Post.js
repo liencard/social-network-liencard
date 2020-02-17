@@ -12,12 +12,6 @@ class Post {
     this.comments = [];
   }
 
-  // like function()
-  addLike(value) {
-    this.like = value;
-    console.log(this.like);
-  }
-
   createHTML() {
     return `<li class="post">
         <button class="post__like">Like</button>
@@ -29,12 +23,24 @@ class Post {
         </div>
       </li>`;
   }
+
+  // like function()
+  addLike(value) {
+    this.like = value;
+    console.log(this.like);
+  }
+
+  addComment(user, comment) {
+    this.comments.push({user: user, comment: comment, time: '8h ago'}); // nog timestamp aan linken
+  }
 }
 
 decorate(Post, {
   like: observable,
+  comments: observable,
+  createHTML: action,
   addLike: action,
-  createHTML: action
+  addComment: action
 });
 
 export default Post;

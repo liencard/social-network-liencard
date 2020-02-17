@@ -58,6 +58,11 @@ const init = () => {
     })
   ]);
 
+  store.post[0].seed([
+    store.addComment(1, 'Leuke foto'),
+    store.addComment(1, 'Wauw staat ook op mijn travellist!!!!!! <3')
+  ]);
+
   window.store = store;
   console.log(store.posts);
 

@@ -27,4 +27,5 @@ test('Aantal posts is 1 na addPost van de store', () => {
     picture: 'image1',
     location: 'strand'});
   expect(store.posts.length).toBe(1);
+  expect(store.posts[0].like).toBe(false);
 });
