@@ -8,4 +8,4 @@ Andere users die dan achteraf op dezelfde locatie zijn kunnen dan je posts/ervar
 
 Elke post kan je ook steeds liken en reacties plaatsen. 
 
-! [tst] https://ibb.co/7gKhHm4
+! [schets] https://ibb.co/7gKhHm4
