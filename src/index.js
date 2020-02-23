@@ -1,7 +1,13 @@
-import './style.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import Store from './js/Store';
 import Post from './js/Post';
+
 import {autorun} from 'mobx';
+//import { useObserver } from 'mobx-react-lite';
+
+import './style.css';
 
 
 const renderPosts = posts => {
