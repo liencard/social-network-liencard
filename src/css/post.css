@@ -24,8 +24,8 @@
 }
 
 .post__avatar {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 5px;
   margin-right: 1.5rem;
 }
@@ -46,6 +46,7 @@
 
 .post__picture {
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 .post__bottom {
@@ -54,6 +55,51 @@
   border-top: .1rem solid rgba(0, 0, 0, .15);
 }
 
+.post__like {
+  border: none;
+  padding: .5rem 3rem;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
 .post--liked {
-  background-color: red;
+  color: red;
+  background-image: url(./../assets/img/heart-full.svg);
+}
+
+.post--unlike {
+  color: black;
+  background-image: url(./../assets/img/heart-border.svg);
+}
+
+.comments {
+  margin-top: 1.5rem;
+}
+
+.comment {
+  margin-bottom: 1rem;
+}
+
+.comment__user {
+  font-weight: 700;
+}
+
+.form {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__input {
+  border: .1rem solid lightgrey;
+  padding: .5rem 1rem;
+  width: 95%;
+}
+
+.form__button {
+  border: .1rem solid lightgray;
+  padding: .5rem 1rem;
+  background-color: white;
+
 }

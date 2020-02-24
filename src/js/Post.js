@@ -1,4 +1,4 @@
-import { observable, action, decorate, configure } from "mobx";
+import { observable, action, computed, decorate, configure } from "mobx";
 configure({ enforceActions: "observed" });
 
 class Post {
@@ -14,7 +14,6 @@ class Post {
     this.activeInput = { user: 'user', comment: ''};
   }
 
-
   addLike() {
     this.like = !this.like;
   }
@@ -26,6 +25,10 @@ class Post {
   addComment(user, comment, time) {
     this.comments.push({ user: user, comment: comment, time: time}); // nog timestamp aan linken
   }
+
+  get commentsLength() {
+    return this.comments.length;
+  }
 }
 
 decorate(Post, {
@@ -34,7 +37,8 @@ decorate(Post, {
   activeInput: observable,
   setComment: action,
   addLike: action,
-  addComment: action
+  addComment: action,
+  commentsLength: computed
 });
 
 export default Post;
