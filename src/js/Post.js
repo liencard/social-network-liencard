@@ -1,13 +1,22 @@
-import {observable, action, decorate, configure} from 'mobx';
-configure({enforceActions: 'observed'});
+import { observable, action, decorate, configure } from "mobx";
+configure({ enforceActions: "observed" });
 
 class Post {
-
-  constructor({description, user, picture, location, like = false}) {
+  constructor({
+    description,
+    user,
+    picture,
+    location,
+    avatar,
+    time,
+    like = false
+  }) {
     this.description = description;
     this.user = user;
     this.picture = picture;
     this.location = location;
+    this.avatar = avatar;
+    this.time = time;
     this.like = like;
     this.comments = [];
   }
@@ -31,7 +40,7 @@ class Post {
   }
 
   addComment(user, comment) {
-    this.comments.push({user: user, comment: comment, time: '8h ago'}); // nog timestamp aan linken
+    this.comments.push({ user: user, comment: comment, time: "8h ago" }); // nog timestamp aan linken
   }
 }
 
