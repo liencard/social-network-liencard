@@ -55,7 +55,10 @@ const App = () => {
               <p className="post__description">{post.description}</p>
             </div>
             <div className="post__bottom">
-              <button className={`post__like ${post.like ? "post--liked" : "post--unlike"}`} onClick={() => { post.addLike(); }}>{post.like ? "Liked" : "Like"}</button>
+              <button
+                style={{backgroundImage: `url(${post.like ? 'assets/img/heart-full.svg' : 'assets/img/heart-border.svg'})`}}
+                className={`post__like ${post.like ? "post--liked" : "post--unlike"}`}
+                onClick={() => { post.addLike(); }}>{post.like ? "Liked" : "Like"}</button>
               <button className="post_comment"><span className="commentAmount">{post.commentsLength}</span> Comments</button>
             </div>
 

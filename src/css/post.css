@@ -64,12 +64,10 @@
 
 .post--liked {
   color: red;
-  background-image: url(./../assets/img/heart-full.svg);
 }
 
 .post--unlike {
   color: black;
-  background-image: url(./../assets/img/heart-border.svg);
 }
 
 .comments {
