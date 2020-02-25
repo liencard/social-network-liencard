@@ -11,7 +11,7 @@ class Post {
     this.time = time;
     this.like = false;
     this.comments = [];
-    this.activeInput = { user: 'user', comment: ''};
+    this.activeInput = { user: 'user', comment: '', time: '3h'};
   }
 
   addLike() {

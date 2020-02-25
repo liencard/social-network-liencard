@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Store from "./js/Store";
-import Post from './js/Post';
+import Store from "./js/stores/Store";
+import Post from './js/models/Post';
 
 import { useObserver } from "mobx-react-lite";
 import "./style.css";
@@ -56,7 +56,7 @@ const App = () => {
             </div>
             <div className="post__bottom">
               <button className={`post__like ${post.like ? "post--liked" : "post--unlike"}`} onClick={() => { post.addLike(); }}>{post.like ? "Liked" : "Like"}</button>
-              <button className="post_comment"><span className="commentAmount">3</span> Comments</button>
+              <button className="post_comment"><span className="commentAmount">{post.commentsLength}</span> Comments</button>
             </div>
 
             <div className="comments">
