@@ -11,7 +11,7 @@ class Post {
     this.time = time;
     this.like = false;
     this.comments = [];
-    this.activeInput = { user: 'user', comment: '', time: '3h'};
+    this.commentInput = { user: 'user', comment: '', time: '3h'};
   }
 
   addLike() {
@@ -19,7 +19,7 @@ class Post {
   }
 
   setComment(user, comment, time) {
-    this.activeInput = { user: user, comment: comment, time: time};
+    this.commentInput = { user: user, comment: comment, time: time};
   }
 
   addComment(user, comment, time) {
@@ -34,7 +34,7 @@ class Post {
 decorate(Post, {
   like: observable,
   comments: observable,
-  activeInput: observable,
+  commentInput: observable,
   setComment: action,
   addLike: action,
   addComment: action,

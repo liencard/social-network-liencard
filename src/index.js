@@ -22,8 +22,8 @@ store.posts[1].addComment('Lotte', 'Amuseer jullie daar ☀', '2 days ago');
 
 
 const pushComment = (post,e) => {
-  post.addComment(post.activeInput.user, post.activeInput.comment, post.activeInput.time);
-  post.setComment(post.activeInput.user, '');
+  post.addComment(post.commentInput.user, post.commentInput.comment, post.commentInput.time);
+  post.setComment(post.commentInput.user, '');
   e.preventDefault();
 }
 
@@ -69,7 +69,7 @@ const App = () => {
                 ))}
               </ul>
               <form className="form" onSubmit={e => pushComment(post, e)}>
-                  <input className="form__input" type="text" id="content" name="content" placeholder="Write a comment" value={post.activeInput.comment} onChange={e => post.setComment('User', e.currentTarget.value)} />
+                  <input className="form__input" type="text" id="content" name="content" placeholder="Write a comment" value={post.commentInput.comment} onChange={e => post.setComment('User', e.currentTarget.value)} />
                   <button className="form__button">post</button>
               </form>
             </div>
