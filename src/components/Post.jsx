@@ -1,0 +1,56 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import Comments from './Comments';
+import { useObserver } from 'mobx-react-lite';
+
+const Post = ({ post, store }) => {
+  return useObserver(() => (
+    <>
+      <li key={post.description} className="post">
+        <div className="post__header">
+          <img
+            className="post__avatar"
+            src={post.avatar}
+            alt="profile icon"
+          ></img>
+          <div className="post__header__wrapper">
+            <p className="post__user">{post.user}</p>
+            <p className="post__location">{post.location}</p>
+            <p className="post__time">{post.time}</p>
+          </div>
+        </div>
+
+        <div className="post__info">
+          <img
+            className="post__picture"
+            src={post.picture}
+            alt="location"
+          ></img>
+          <p className="post__description">{post.description}</p>
+        </div>
+
+        <div className="post__bottom">
+          <button
+            style={{backgroundImage: `url(${ post.like ? 'assets/img/heart-full.svg' : 'assets/img/heart-border.svg'})`}}
+            className={`post__like ${ post.like ? 'post--liked' : 'post--unlike'}`}
+            onClick={() => { post.addLike();}}
+            >{post.like ? 'Liked' : 'Like'}
+          </button>
+          <button className="post_comment">
+            <span className="commentAmount">{post.commentsLength}</span>{' '} Comments
+          </button>
+        </div>
+
+        <Comments post={post} store={store} key={post.id}/>
+
+      </li>
+    </>
+  ));
+};
+
+Post.propTypes = {
+  post: PropTypes.object.isRequired,
+  store: PropTypes.object.isRequired
+};
+
+export default Post;

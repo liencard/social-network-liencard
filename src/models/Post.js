@@ -1,8 +1,11 @@
 import { observable, action, computed, decorate, configure } from "mobx";
+import { v4 } from 'uuid';
+
 configure({ enforceActions: "observed" });
 
 class Post {
   constructor({ description, user, picture, location, avatar, time}) {
+    this.id = v4();
     this.description = description;
     this.user = user;
     this.picture = picture;
