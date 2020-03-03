@@ -1,5 +1,6 @@
 import { observable, action, computed, decorate, configure } from "mobx";
 import { v4 } from 'uuid';
+import Comment from "./Comment";
 
 configure({ enforceActions: "observed" });
 
@@ -13,20 +14,21 @@ class Post {
     this.avatar = avatar;
     this.time = time;
     this.like = false;
+    
     this.comments = [];
-    this.commentInput = { user: 'user', comment: '', time: '3h'};
+    this.commentInput = '';
   }
 
   addLike() {
     this.like = !this.like;
   }
 
-  setComment(user, comment, time) {
-    this.commentInput = { user: user, comment: comment, time: time};
+  setComment(comment) {
+    this.commentInput = comment;
   }
 
-  addComment(user, comment, time) {
-    this.comments.push({ user: user, comment: comment, time: time}); // nog timestamp aan linken
+  addComment(comment) {
+    this.comments.push(new Comment(comment)); // nog timestamp aan linken
   }
 
   get commentsLength() {

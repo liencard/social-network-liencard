@@ -1,0 +1,30 @@
+.comments {
+  margin-top: 1.5rem;
+}
+
+.comment {
+  margin-bottom: 1rem;
+}
+
+.comment__user {
+  font-weight: 700;
+}
+
+.form {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__input {
+  border: .1rem solid lightgrey;
+  padding: .5rem 1rem;
+  width: 95%;
+}
+
+.form__button {
+  border: .1rem solid lightgray;
+  padding: .5rem 1rem;
+  background-color: white;
+}

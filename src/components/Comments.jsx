@@ -9,10 +9,19 @@ const Comments = ({ post, store }) => {
     <>
       <div className="comments">
         <ul className="comments__list">
-          {post.comments.map(comment => (
-            //   nog id voor voorzien
+          
+          {post.comments?
+            (
+              post.comments.map(comment => (
+                <Comment comment={comment} key={comment.id} />
+              ))
+            )
+           : 'no comments'}
+
+
+          {/* {post.comments.map(comment => (
             <Comment comment={comment} key={comment.id}/>
-          ))}
+          ))} */}
         </ul>
         <FormComment post={post}/>
       </div>

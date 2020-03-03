@@ -5,7 +5,7 @@ import { useObserver } from 'mobx-react-lite';
 const Comment = ({ comment }) => {
   return useObserver(() => (
     <>
-      <li className="comment" key={comment.comment}>
+      <li className="comment" key={comment.id}>
         <p><span className="comment__user">{comment.user}</span> -{' '}<span className="comment__time">{comment.time}</span></p>
         <p className="comment__comment">{comment.comment}</p>
       </li>
