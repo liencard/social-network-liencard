@@ -4,7 +4,7 @@ import Comment from './Comment';
 import FormComment from './FormComment';
 import { useObserver } from 'mobx-react-lite';
 
-const Comments = ({ post, store }) => {
+const Comments = ({ post }) => {
   return useObserver(() => (
     <>
       <div className="comments">
@@ -18,10 +18,6 @@ const Comments = ({ post, store }) => {
             )
            : 'no comments'}
 
-
-          {/* {post.comments.map(comment => (
-            <Comment comment={comment} key={comment.id}/>
-          ))} */}
         </ul>
         <FormComment post={post}/>
       </div>
@@ -30,8 +26,7 @@ const Comments = ({ post, store }) => {
 };
 
 Comments.propTypes = {
-  post: PropTypes.object.isRequired,
-  store: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired
 };
 
 export default Comments;

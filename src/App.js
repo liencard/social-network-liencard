@@ -1,18 +1,15 @@
 import React from 'react';
 import Posts from "./components/Posts";
-import PropTypes from 'prop-types';
+import { useStores } from "./hooks";
 
 
-function App({ store }) {
+function App() {
   return (
     <>
-      <Posts store={store} />
+      <Posts />
     </>
   );
 }
 
-App.propTypes = {
-  store: PropTypes.object.isRequired
-};
 
 export default App;

@@ -2,8 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comments from './Comments';
 import { useObserver } from 'mobx-react-lite';
+import { useStores } from "../hooks";
 
-const Post = ({ post, store }) => {
+
+const Post = ({ post }) => {
+
+  const { store } = useStores();
+
   return useObserver(() => (
     <>
       <li key={post.description} className="post">
@@ -49,8 +54,7 @@ const Post = ({ post, store }) => {
 };
 
 Post.propTypes = {
-  post: PropTypes.object.isRequired,
-  store: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired
 };
 
 export default Post;
