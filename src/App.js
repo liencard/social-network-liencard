@@ -1,5 +1,7 @@
 import React from 'react';
 import Posts from "./components/Posts";
+import PropTypes from 'prop-types';
+
 
 function App({ store }) {
   return (
@@ -8,5 +10,9 @@ function App({ store }) {
     </>
   );
 }
+
+App.propTypes = {
+  store: PropTypes.object.isRequired
+};
 
 export default App;
