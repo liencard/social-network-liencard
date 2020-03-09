@@ -1,8 +1,5 @@
-.posts {
-  margin: 2rem;
-  padding: 0;
-  list-style: none;
-}
+@value tokens: "../../styles/tokens.module.css";
+@value fontSizeL, primaryColor from tokens;
 
 .post {
   background-color: white;
@@ -69,4 +66,3 @@
 .post--unlike {
   color: black;
 }
-

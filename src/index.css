@@ -1,7 +1,4 @@
-@import './css/reset.css';
-@import './css/vars.css';
-@import './css/post.css';
-@import './css/comments.css';
+@import "./styles/reset.css";
 
 html {
   box-sizing: border-box;
@@ -27,7 +24,13 @@ body {
   font-size: 1.4rem;
   margin: 0;
   background-color: rgb(240,240,240);
-
-  text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,14 @@
+@value tokens: "../../styles/tokens.module.css";
+@value spacer1, spacer2 from tokens;
+
+.form {
+  composes: form from "../../styles/components.module.css";
+}
+
+.form__input {
+  composes: form__input from "../../styles/components.module.css";
+}
+
+.form__button {
+  composes: form__button from "../../styles/components.module.css";
+}

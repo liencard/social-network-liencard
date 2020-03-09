@@ -1,0 +1,10 @@
+@value tokens: "../../styles/tokens.module.css";
+@value fontSizeL, primaryColor from tokens;
+
+.comment {
+  margin-bottom: 1rem;
+}
+
+.comment__user {
+  font-weight: 700;
+}

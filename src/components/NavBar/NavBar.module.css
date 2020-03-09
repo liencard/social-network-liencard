@@ -1,0 +1,28 @@
+@value tokens: "../../style/tokens.module.css";
+@value  from tokens;
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.button {
+  display: block;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-size: fontSizeMedium;
+  height: 5rem;
+  width: 5rem;
+
+  color: darkPrimary;
+}
+
+.active {
+  background-color: primaryColor;
+  color: pink;
+}

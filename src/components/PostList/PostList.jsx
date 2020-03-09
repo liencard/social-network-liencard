@@ -3,6 +3,7 @@ import Post from '../Post/Post';
 import FormPost from '../FormPost/FormPost';
 import { useObserver } from 'mobx-react-lite';
 import { useStores } from "../../hooks";
+import style from "./PostList.module.css";
 
 const PostList = () => {
 
@@ -10,7 +11,7 @@ const PostList = () => {
 
     return useObserver(() => (
       <section className="container">
-        <ul className="posts">
+        <ul className={style.posts}>
           {dataStore.posts.map(post => (
             <Post post={post} key={post.id} />
           ))}

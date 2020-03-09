@@ -18,11 +18,3 @@
   grid-row: span 2;
 }
 
-.full {
-  composes: base;
-  grid-row: 1 / -1;
-}
-
-.column {
-  padding: spacer1;
-}

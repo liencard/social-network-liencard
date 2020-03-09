@@ -2,9 +2,10 @@ import React, { useState }  from 'react';
 import { useObserver } from 'mobx-react-lite';
 import { useStores } from "../../hooks";
 import Post from '../../models/Post';
+import style from "./FormPost.module.css";
 
 const FormPost = () => {
-
+ 
     const { dataStore } = useStores();
     const [description, setContent] = useState("");
 
@@ -23,10 +24,10 @@ const FormPost = () => {
     }
 
     return useObserver(() => (
-        <form className="form" onSubmit={handleSubmitPost}>
-            <input className="form__input__description" type="text" id="description" name="description"
+        <form className={style.form} onSubmit={handleSubmitPost}>
+            <input className={style.form__input__description} type="text" id="description" name="description"
                 placeholder="Write a description" value={description} onChange={e => setContent(e.currentTarget.value)} />
-            <button className="form__button">post</button>
+            <button className={style.form__button}>post</button>
         </form>
 
     ));
