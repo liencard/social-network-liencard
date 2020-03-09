@@ -1,6 +1,6 @@
 import React from 'react';
-import Posts from "./components/Posts";
-import Detail from './components/Detail';
+import PostList from "./components/PostList/PostList";
+import Detail from './components/Detail/Detail';
 import { Switch, Route} from 'react-router-dom';
 
 
@@ -14,7 +14,7 @@ function App() {
         </Route>
 
         <Route exact path="/">
-          <Posts />
+          <PostList />
         </Route>
 
         <Route>

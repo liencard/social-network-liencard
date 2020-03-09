@@ -1,7 +1,7 @@
 import React, { useState }  from 'react';
 import { useObserver } from 'mobx-react-lite';
-import { useStores } from "../hooks";
-import Post from '../models/Post';
+import { useStores } from "../../hooks";
+import Post from '../../models/Post';
 
 const FormPost = () => {
 

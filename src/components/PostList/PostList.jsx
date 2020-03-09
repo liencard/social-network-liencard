@@ -1,10 +1,10 @@
 import React from 'react';
-import Post from './Post';
-import FormPost from './FormPost';
+import Post from '../Post/Post';
+import FormPost from '../FormPost/FormPost';
 import { useObserver } from 'mobx-react-lite';
-import { useStores } from "../hooks";
+import { useStores } from "../../hooks";
 
-const Posts = () => {
+const PostList = () => {
 
   const { dataStore } = useStores();
 
@@ -20,4 +20,4 @@ const Posts = () => {
     ));
 };
 
-export default Posts;
+export default PostList;

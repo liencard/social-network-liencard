@@ -1,27 +1,20 @@
 import React from 'react';
-import BackLink from './BackLink';
-
-import Comments from './Comments';
+import PropTypes from 'prop-types';
+import CommentList from '../CommentList/CommentList';
 
 import { useObserver } from 'mobx-react-lite';
-import { useParams } from 'react-router-dom';
-import { useStores } from "../hooks";
+import { Link } from "react-router-dom";
 
-const Detail = () => {
-
-  const { id } = useParams();
-  const { dataStore } = useStores();
-  const post = dataStore.getPostById(id);
+const Post = ({ post }) => {
 
   return useObserver(() => (
     <>
-      <BackLink />
-
-      <li key={id} className="post">
+      <Link to={`/detail/${post.id}`}>
+      <li key={post.description} className="post">
         <div className="post__header">
           <img
             className="post__avatar"
-            src={`../${post.avatar}`}
+            src={post.avatar}
             alt="profile icon"
           ></img>
           <div className="post__header__wrapper">
@@ -34,7 +27,7 @@ const Detail = () => {
         <div className="post__info">
           <img
             className="post__picture"
-            src={`../${post.picture}`}
+            src={post.picture}
             alt="location"
           ></img>
           <p className="post__description">{post.description}</p>
@@ -42,21 +35,26 @@ const Detail = () => {
 
         <div className="post__bottom">
           <button
-            style={{ backgroundImage: `url(${post.like ? 'assets/img/heart-full.svg' : 'assets/img/heart-border.svg'})` }}
-            className={`post__like ${post.like ? 'post--liked' : 'post--unlike'}`}
-            onClick={() => { post.addLike(); }}
-          >{post.like ? 'Liked' : 'Like'}
+            style={{backgroundImage: `url(${ post.like ? 'assets/img/heart-full.svg' : 'assets/img/heart-border.svg'})`}}
+            className={`post__like ${ post.like ? 'post--liked' : 'post--unlike'}`}
+            onClick={() => { post.addLike();}}
+            >{post.like ? 'Liked' : 'Like'}
           </button>
           <button className="post_comment">
             <span className="commentAmount">{post.commentsLength}</span>{' '} Comments
           </button>
         </div>
 
-        <Comments post={post} store={dataStore} key={post.id} />
+        <CommentList post={post} key={post.id}/>
 
       </li>
+      </Link>
     </>
   ));
 };
 
-export default Detail;
+Post.propTypes = {
+  post: PropTypes.object.isRequired
+};
+
+export default Post;

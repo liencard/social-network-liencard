@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comment from './Comment';
-import FormComment from './FormComment';
+import Comment from '../Comment/Comment';
+import FormComment from '../FormComment/FormComment';
 import { useObserver } from 'mobx-react-lite';
 
-const Comments = ({ post }) => {
+const CommentList = ({ post }) => {
   return useObserver(() => (
     <>
       <div className="comments">
@@ -25,8 +25,8 @@ const Comments = ({ post }) => {
   ));
 };
 
-Comments.propTypes = {
+CommentList.propTypes = {
   post: PropTypes.object.isRequired
 };
 
-export default Comments;
+export default CommentList;
