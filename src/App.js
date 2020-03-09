@@ -1,12 +1,26 @@
 import React from 'react';
 import Posts from "./components/Posts";
-import { useStores } from "./hooks";
+import Detail from './components/Detail';
+import { Switch, Route} from 'react-router-dom';
 
 
 function App() {
   return (
     <>
-      <Posts />
+      <Switch>
+
+        <Route path="/detail/:id">
+          <Detail />
+        </Route>
+
+        <Route exact path="/">
+          <Posts />
+        </Route>
+
+        <Route>
+          <p>Not found</p>
+        </Route>
+      </Switch>
     </>
   );
 }

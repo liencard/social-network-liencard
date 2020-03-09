@@ -6,12 +6,12 @@ import { useStores } from "../hooks";
 
 const Posts = () => {
 
-  const { store } = useStores();
+  const { dataStore } = useStores();
 
     return useObserver(() => (
       <section className="container">
         <ul className="posts">
-          {store.posts.map(post => (
+          {dataStore.posts.map(post => (
             <Post post={post} key={post.id} />
           ))}
         </ul>

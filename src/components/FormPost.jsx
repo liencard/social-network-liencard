@@ -5,14 +5,13 @@ import Post from '../models/Post';
 
 const FormPost = () => {
 
-    const { store } = useStores();
-
+    const { dataStore } = useStores();
     const [description, setContent] = useState("");
 
     const handleSubmitPost = e => {
         e.preventDefault();
     
-        store.addPost(new Post({ 
+        dataStore.addPost(new Post({ 
             description,
             user: 'User',
             picture: './assets/img/cyprus.png',
@@ -25,7 +24,8 @@ const FormPost = () => {
 
     return useObserver(() => (
         <form className="form" onSubmit={handleSubmitPost}>
-            <input className="form__input__description" type="text" id="description" name="description" placeholder="Write a description" value={description} onChange={e => setContent(e.currentTarget.value)} />
+            <input className="form__input__description" type="text" id="description" name="description"
+                placeholder="Write a description" value={description} onChange={e => setContent(e.currentTarget.value)} />
             <button className="form__button">post</button>
         </form>
 

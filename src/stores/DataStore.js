@@ -1,7 +1,7 @@
 import { observable, action, decorate, configure } from "mobx";
 configure({ enforceActions: "observed" });
 
-class Store {
+class DataStore {
   constructor() {
     this.posts = [];
   }
@@ -14,12 +14,14 @@ class Store {
     this.posts = posts;
   }
 
+  getPostById = id => this.posts.find(post => post.id === id);
+
 }
 
-decorate(Store, {
+decorate(DataStore, {
   posts: observable,
   addPost: action,
   seed: action
 });
 
-export default Store;
+export default DataStore;
