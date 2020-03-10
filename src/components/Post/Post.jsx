@@ -32,6 +32,7 @@ const Post = ({ post }) => {
               alt="location"
             ></img>
             <p className={style.post__description}>{post.description}</p>
+            {/* {post.tags ?
             <ul className={style.post__tags}>
               {post.tags
                 ? post.tags.map(tag => (
@@ -40,8 +41,8 @@ const Post = ({ post }) => {
                     </li>
                   ))
                 : ''}
-            </ul>
-            {/* <p className={style.post__tags}>{post.tags}</p> */}
+            </ul> : ''} */}
+            <p className={style.post__tags}>{post.tags}</p>
           </div>
         </Link>
         <div className={style.post__bottom}>

@@ -18,7 +18,7 @@ const FormPost = () => {
         dataStore.addPost(new Post({ 
             description,
             user: 'User',
-            picture: './assets/img/travel.jpg',
+            picture: './assets/img/travel3.jpg',
             location,
             tags,
             avatar: './assets/img/avatar.png',
