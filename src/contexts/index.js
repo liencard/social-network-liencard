@@ -13,7 +13,7 @@ const p1 = new Post({
     user: 'Tom De Wilde',
     picture: './assets/img/travel1.jpg',
     location: 'Greenland',
-    tags: ['#scenery', '#rowing', '#lake'],
+    tags: ['scenery', 'rowing', 'lake'],
     avatar: './assets/img/avatar1.jpg',
     time: '6h ago'
 });
@@ -24,9 +24,9 @@ const p2 = new Post({
   user: 'Mathias Van Daele',
   picture: './assets/img/travel2.jpg',
   location: 'Norway',
-  tags: ['#peaceful', '#mountains', '#hiking'],
+  tags: ['peaceful', 'mountains', 'hiking'],
   avatar: './assets/img/avatar2.jpg',
-  time: '1 hour ago'
+  time: '1h ago'
 });
 
 p1.comments = [

@@ -16,6 +16,7 @@ class DataStore {
 
   getPostById = id => this.posts.find(post => post.id === id);
 
+  getPostByLike = () => this.posts.filter(post => post.like === true);
 }
 
 decorate(DataStore, {
