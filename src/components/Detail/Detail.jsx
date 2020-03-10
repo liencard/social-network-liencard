@@ -1,6 +1,6 @@
 import React from 'react';
-import BackLink from '../BackLink/BackLink';
 
+import Header from '../Header/Header';
 import CommentList from '../CommentList/CommentList';
 
 import { useObserver } from 'mobx-react-lite';
@@ -15,7 +15,7 @@ const Detail = () => {
 
   return useObserver(() => (
     <>
-      <BackLink />
+      <Header title={"Detail"} />
 
       <li key={id} className="post">
         <div className="post__header">

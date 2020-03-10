@@ -1,11 +1,13 @@
-@value tokens: "../../style/tokens.module.css";
-@value  from tokens;
+@value tokens: "../../styles/tokens.module.css";
+@value spacerSmall, spacerMedium from tokens;
 
 .list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  padding: spacerSmall spacerMedium;
+  background-color: white;
 }
 
 .button {
@@ -14,15 +16,10 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-
-  font-size: fontSizeMedium;
-  height: 5rem;
-  width: 5rem;
-
-  color: darkPrimary;
+  height: 2rem;
+  width: 2rem;
 }
 
 .active {
-  background-color: primaryColor;
-  color: pink;
+  color: purple;
 }

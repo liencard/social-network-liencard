@@ -1,0 +1,11 @@
+@value tokens: "../../styles/tokens.module.css";
+@value spacerSmall, spacerMedium from tokens;
+
+ .header {
+    background-color: background;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: spacerSmall spacerMedium;
+    color: white;
+ }

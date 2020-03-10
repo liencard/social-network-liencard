@@ -1,6 +1,5 @@
 import React from 'react';
 import Post from '../Post/Post';
-import FormPost from '../FormPost/FormPost';
 import { useObserver } from 'mobx-react-lite';
 import { useStores } from "../../hooks";
 import style from "./PostList.module.css";
@@ -16,7 +15,6 @@ const PostList = () => {
             <Post post={post} key={post.id} />
           ))}
         </ul>
-        <FormPost />
       </section>
     ));
 };
