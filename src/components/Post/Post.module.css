@@ -2,10 +2,8 @@
 @value spacerSmall, spacerMedium, spacerBig, fontSizeMedium, colorPrimary from tokens;
 
 .post {
-  background-color: white;
+  composes: post from "../../styles/components.module.css";
   border-radius: 5px;
-  padding: calc(spacerBig / 2);
-  margin-bottom: spacerMedium;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
 }
 

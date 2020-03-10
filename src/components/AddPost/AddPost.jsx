@@ -18,10 +18,10 @@ const FormPost = () => {
         dataStore.addPost(new Post({ 
             description,
             user: 'User',
-            picture: './assets/img/cyprus.png',
+            picture: './assets/img/travel.jpg',
             location,
             tags,
-            avatar: './assets/img/cyprus.png',
+            avatar: './assets/img/avatar.png',
             time: '1s ago'
         }));
         setDescription("");

@@ -1,76 +1,57 @@
 @value tokens: "../../styles/tokens.module.css";
-@value spacerSmall, spacerMedium, spacerBig, fontSizeMedium, colorPrimary from tokens;
+@value spacerSmall, spacerMedium, spacerBig, spacerLarge, fontSizeMedium, colorPrimary from tokens;
 
 .post {
-  background-color: white;
-  padding: calc(spacerBig / 2);
-  margin-bottom: spacerMedium;
-  margin-top: 4rem;
+  composes: post from "../../styles/components.module.css";
   height: 100vh;
   list-style: none;
+  margin-top: spacerLarge;
 }
 
 .post__header {
-  display: flex;
-  align-items: center;
-  margin-bottom: spacerMedium;
+  composes: post__header from "../../components/Post/Post.module.css";
 }
 
 .post__header__wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  width: 100%;
+  composes: post__header__wrapper from "../../components/Post/Post.module.css";
 }
 
 .post__avatar {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  margin-right: spacerSmall;
+  composes: post__avatar from "../../components/Post/Post.module.css";
 }
 
 .post__user {
-  font-weight: bold;
-  grid-column: span 2;
-  font-size: fontSizeMedium;
-  padding-bottom: .3rem;
+  composes: post__user from "../../components/Post/Post.module.css";
 }
 
 .post__location {
-  font-weight: light;
+  composes: post__location from "../../components/Post/Post.module.css";
 }
 
 .post__tags {
-  color: colorPrimary;
-  padding-top: 1rem;
+  composes: post__tags from "../../components/Post/Post.module.css";
 }
 
 .post__time {
-  text-align: right;
+  composes: post__time from "../../components/Post/Post.module.css";
 }
 
 .post__picture {
-  width: 100%;
-  padding-bottom: spacerSmall;
+  composes: post__picture from "../../components/Post/Post.module.css";
 }
 
 .post__bottom {
-  margin-top: spacerMedium;
-  padding-top: spacerSmall;
-  border-top: .1rem solid rgba(0, 0, 0, .15);
+  composes: post__bottom from "../../components/Post/Post.module.css";
 }
 
 .post__like {
-  border: none;
-  padding: .5rem spacerBig;
-  background-repeat: no-repeat;
-  background-color: white;
+  composes: post__like from "../../components/Post/Post.module.css";
 }
 
 .post--liked {
-  color: red;
+  composes: post--liked from "../../components/Post/Post.module.css";
 }
 
 .post--unlike {
-  color: black;
+  composes: post--unlike from "../../components/Post/Post.module.css";
 }
