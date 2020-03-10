@@ -9,6 +9,7 @@ import AddButton from './components/AddButton/AddButton';
 import AddPost from './components/AddPost/AddPost';
 
 import { Switch, Route} from 'react-router-dom';
+import { ROUTES } from './const/index';
 import style from "./App.module.css";
 
 function App() {
@@ -17,22 +18,22 @@ function App() {
       <div className={style.app}>
         <div className={style.content}>
           <Switch>
-            <Route path="/detail/:id">
+            <Route path={ROUTES.postDetail.path}>
               <Detail />
             </Route>
-            <Route path="/search">
+            <Route path={ROUTES.search}>
               <Search />
             </Route>
-            <Route path="/likes">
+            <Route path={ROUTES.likes}>
               <Likes />
             </Route>
-            <Route path="/me">
+            <Route path={ROUTES.profile}>
               <Profile />
             </Route>
-            <Route path="/addpost">
+            <Route path={ROUTES.addpost}>
               <AddPost />
             </Route>
-            <Route exact path="/">
+            <Route exact path={ROUTES.home}>
               <PostList />
             </Route>
             <Route>
