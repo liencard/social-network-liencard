@@ -1,6 +1,6 @@
 @value tokens: "../../styles/tokens.module.css";
-@value fontSizeL, primaryColor from tokens;
+@value spacerBig from tokens;
 
 .comments {
-  margin-top: 1.5rem;
+  margin-top: calc(spacerBig / 2);
 }

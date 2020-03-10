@@ -1,10 +1,12 @@
-@value colorPrimary: #00bcd4;
+@value colorPrimary: #6363ca;
+@value colorDark: #3f3f8a;
 @value background: #f0f0f0;
 @value hover: #eee;
 
 @value spacerSmall: 1rem;
 @value spacerMedium: 2rem;
+@value spacerBig: 3rem;
 @value spacerLarge: 5rem;
 
-@value fontSizeMedium: 1.8rem;
+@value fontSizeMedium: 1.6rem;
 @value fontSizeLarge: 3rem;

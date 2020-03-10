@@ -19,7 +19,7 @@ const FormComment = ({ post }) => {
       <input className={style.form__input} type="text" id="content" name="content" placeholder="Write a comment"
         value={comment}
         onChange={e => setComment(e.currentTarget.value)} />
-      <button className={style.form__button}>post</button>
+      <button className={style.form__button}><img src="../assets/img/send.svg" alt="paper plane send icon"></img></button>
     </form>
   ));
 };

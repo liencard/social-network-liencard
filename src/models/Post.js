@@ -5,12 +5,13 @@ import Comment from "./Comment";
 configure({ enforceActions: "observed" });
 
 class Post {
-  constructor({ description, user, picture, location, avatar, time}) {
+  constructor({ description, user, picture, location, tags, avatar, time}) {
     this.id = v4();
     this.description = description;
     this.user = user;
     this.picture = picture;
     this.location = location;
+    this.tags = tags;
     this.avatar = avatar;
     this.time = time;
     this.like = false;

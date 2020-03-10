@@ -1,8 +1,8 @@
 @value tokens: "../../styles/tokens.module.css";
-@value spacerSmall, spacerBig from tokens;
+@value spacerSmall, spacerBig, colorPrimary from tokens;
 
 .add__button {
-    background-color: background;
+    background-color: colorPrimary;
     color:white;
     width: 4rem;
     height: 4rem;

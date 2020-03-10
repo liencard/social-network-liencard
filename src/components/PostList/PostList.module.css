@@ -1,8 +1,9 @@
 @value tokens: "../../styles/tokens.module.css";
-@value fontSizeL, primaryColor from tokens;
+@value spacerMedium from tokens;
 
 .posts {
-  margin: 2rem;
+  margin: spacerMedium;
+  margin-top: 6rem;
   padding: 0;
   list-style: none;
 }

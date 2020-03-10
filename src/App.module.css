@@ -1,7 +1,7 @@
 .app {
   display: grid;
-  grid-template-rows: 4rem 1fr 4rem;
-  grid-template-areas: "header" "content" "nav";
+  grid-template-rows: 1fr 4rem;
+  grid-template-areas: "content" "nav";
   height: 100vh;
 }
 

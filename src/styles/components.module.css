@@ -1,5 +1,5 @@
 @value tokens: "./tokens.module.css";
-@value fontSizeMedium, notblack, solight,background,colorPrimary, spacer1, spacer2 from tokens;
+@value spacerMedium from tokens;
 
 .form {
   width: 100%;
@@ -9,22 +9,18 @@
 }
 
 .form__input {
-  border: .1rem solid lightgrey;
+  border: .1rem solid #dcdcfa;
+  border-radius: 10rem;
   padding: .5rem 1rem;
   width: 95%;
 }
 
 .form__button {
-  border: .1rem solid lightgray;
-  padding: .5rem 1rem;
+  border: none;
   background-color: white;
 }
 
-/* .button {
-  border: 0.1rem solid notblack;
-  padding: spacer1;
-  border-radius: spacer2;
-  font-size: fontSizeMedium;
-  color: notblack;
-  background-color: solight;
-} */
+.form__button img {
+  width: 2rem;
+  height: 2rem;
+}

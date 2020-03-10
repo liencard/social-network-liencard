@@ -3,10 +3,11 @@
 
 .post {
   background-color: white;
-  border-radius: 5px;
   padding: calc(spacerBig / 2);
   margin-bottom: spacerMedium;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 4rem;
+  height: 100vh;
+  list-style: none;
 }
 
 .post__header {
@@ -39,6 +40,11 @@
   font-weight: light;
 }
 
+.post__tags {
+  color: colorPrimary;
+  padding-top: 1rem;
+}
+
 .post__time {
   text-align: right;
 }
@@ -46,11 +52,6 @@
 .post__picture {
   width: 100%;
   padding-bottom: spacerSmall;
-}
-
-.post__tags {
-  color: colorPrimary;
-  padding-top: spacerSmall
 }
 
 .post__bottom {

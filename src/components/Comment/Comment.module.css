@@ -1,10 +1,14 @@
 @value tokens: "../../styles/tokens.module.css";
-@value fontSizeL, primaryColor from tokens;
+@value spacerSmall from tokens;
 
 .comment {
-  margin-bottom: 1rem;
+  margin-bottom: spacerSmall;
 }
 
 .comment__user {
   font-weight: 700;
+}
+
+.comment__comment {
+  padding-top: .2rem;
 }
