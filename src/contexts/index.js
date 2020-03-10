@@ -10,10 +10,10 @@ const rootStore = { dataStore: new DataStore(), uiStore: new UiStore() };
 const p1 = new Post({
     description:
         'Zon, zee, strand! Morbi nec rutrum magna. Curabitur et malesuada nunc.',
-    user: 'Lien Cardoen',
+    user: 'Tom De Wilde',
     picture: './assets/img/travel1.jpg',
-    location: 'Cyprus',
-    tags: ['#tag', '#tag2', '#tag3'],
+    location: 'Greenland',
+    tags: ['#scenery', '#rowing', '#lake'],
     avatar: './assets/img/avatar1.jpg',
     time: '6h ago'
 });
@@ -21,10 +21,10 @@ const p1 = new Post({
 const p2 = new Post({
   description:
     'Zonsondergang uit Cyprus. Morbi sed nisl quis urna ornare euismod. Suspendisse sed vestibulum massa.',
-  user: 'Sarah Van Den Berghe',
+  user: 'Mathias Van Daele',
   picture: './assets/img/travel2.jpg',
-  location: 'Duinkerke',
-  tags: ['#tag', '#tag2', '#tag3'],
+  location: 'Norway',
+  tags: ['#peaceful', '#mountains', '#hiking'],
   avatar: './assets/img/avatar2.jpg',
   time: '1 hour ago'
 });

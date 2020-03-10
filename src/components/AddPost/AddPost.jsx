@@ -26,6 +26,7 @@ const FormPost = () => {
         }));
         setDescription("");
         setLocation('');
+        setTag('');
     }
 
     return useObserver(() => (

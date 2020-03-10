@@ -30,7 +30,7 @@ const NavBar = () => {
         </li>
         <li>
           <NavLink className={style.button} activeClassName={style.active} to="/me">
-            <LikesLogo fill="currentColor" />
+            <ProfileLogo fill="currentColor" />
             <span className="hidden">Profile</span>
           </NavLink>
         </li>

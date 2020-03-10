@@ -1,5 +1,5 @@
 @value tokens: "../../styles/tokens.module.css";
-@value spacerSmall, spacerMedium, spacerBig, fontSizeMedium, colorPrimary from tokens;
+@value spacerSmall, spacerMedium, spacerBig, fontSizeMedium, colorPrimary, colorDark from tokens;
 
 .post {
   composes: post from "../../styles/components.module.css";
@@ -35,6 +35,13 @@
 
 .post__location {
   font-weight: light;
+  color: colorDark;
+}
+
+.post__location img {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: .2rem;
 }
 
 .post__time {
@@ -48,7 +55,12 @@
 
 .post__tags {
   color: colorPrimary;
-  padding-top: spacerSmall
+  padding-top: spacerSmall;
+  display: flex;
+}
+
+.tag {
+  margin-right: spacerSmall;
 }
 
 .post__bottom {

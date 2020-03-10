@@ -20,7 +20,7 @@ const Post = ({ post }) => {
             ></img>
             <div className={style.post__header__wrapper}>
               <p className={style.post__user}>{post.user}</p>
-              <p className={style.post__location}>{post.location}</p>
+              <p className={style.post__location}><img src="../assets/img/pin.svg" alt="location icon"></img>{post.location}</p>
               <p className={style.post__time}>{post.time}</p>
             </div>
           </div>
@@ -32,7 +32,16 @@ const Post = ({ post }) => {
               alt="location"
             ></img>
             <p className={style.post__description}>{post.description}</p>
-            <p className={style.post__tags}>{post.tags}</p>
+            <ul className={style.post__tags}>
+              {post.tags
+                ? post.tags.map(tag => (
+                    <li className={style.tag} key={tag}>
+                      {tag}
+                    </li>
+                  ))
+                : ''}
+            </ul>
+            {/* <p className={style.post__tags}>{post.tags}</p> */}
           </div>
         </Link>
         <div className={style.post__bottom}>
@@ -52,7 +61,8 @@ const Post = ({ post }) => {
             {post.like ? 'Liked' : 'Like'}
           </button>
           <button className={style.post_comment}>
-            <span className={style.commentAmount}>{post.commentsLength}</span>{' '}Comments
+            <span className={style.commentAmount}>{post.commentsLength}</span>{' '}
+            Comments
           </button>
         </div>
       </li>
