@@ -1,5 +1,4 @@
 import React, { useState }  from 'react';
-import { useObserver } from 'mobx-react-lite';
 import { useStores } from "../../hooks";
 import Post from '../../models/Post';
 import Header from '../Header/Header';
@@ -29,7 +28,7 @@ const FormPost = () => {
         setTag('');
     }
 
-    return useObserver(() => (
+    return (
       <>
         <Header title={'Add Post'} />
 
@@ -67,7 +66,7 @@ const FormPost = () => {
           <button className={style.form__button}>post</button>
         </form>
       </>
-    ));
+    );
 };
 
 export default FormPost;

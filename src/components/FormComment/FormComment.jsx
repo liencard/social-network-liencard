@@ -1,6 +1,5 @@
 import React, { useState }  from 'react';
 import PropTypes from 'prop-types';
-import { useObserver } from 'mobx-react-lite';
 import style from "./FormComment.module.css";
 
 const FormComment = ({ post }) => {
@@ -14,14 +13,14 @@ const FormComment = ({ post }) => {
     };
 
 
-  return useObserver(() => (
+  return (
     <form className={style.form} onSubmit={handleSubmitComment}>
       <input className={style.form__input} type="text" id="content" name="content" placeholder="Write a comment"
         value={comment}
         onChange={e => setComment(e.currentTarget.value)} />
       <button className={style.form__button}><img src="../assets/img/send.svg" alt="paper plane send icon"></img></button>
     </form>
-  ));
+  );
 };
 
 FormComment.propTypes = {
