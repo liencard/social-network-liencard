@@ -9,7 +9,7 @@ class User {
         this.store = store;
 
         if (!avatar) {
-            this.avatar = './assets/img/avatar.png';
+            this.avatar = 'https://www.travelcontinuously.com/wp-content/uploads/2018/04/empty-avatar.png';
         }
 
         if (!store) {

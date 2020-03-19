@@ -21,7 +21,7 @@ const FormPost = () => {
         picture,
         location,
         tags,
-        avatar: './assets/img/avatar.png',
+        // avatar: './assets/img/avatar.png',
         time: '1s ago'
     }));
     setDescription("");
