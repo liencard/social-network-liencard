@@ -7,7 +7,7 @@ const Comment = ({ comment }) => {
   return useObserver(() => (
     <>
       <li className={style.comment} key={comment.id}>
-        <p><span className={style.comment__user}>{comment.user}</span> -{' '}<span className={style.comment__time}>{comment.time}</span></p>
+        <p><span className={style.comment__user}>{comment.user.name}</span> -{' '}<span className={style.comment__time}>{comment.time}</span></p>
         <p className={style.comment__comment}>{comment.comment}</p>
       </li>
     </>

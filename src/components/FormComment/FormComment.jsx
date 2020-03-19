@@ -1,15 +1,20 @@
 import React, { useState }  from 'react';
 import PropTypes from 'prop-types';
 import style from "./FormComment.module.css";
+import { useStores } from '../../hooks';
 
 const FormComment = ({ post }) => {
 
+    const { uiStore } = useStores();
     const [comment, setComment] = useState("");
 
     const handleSubmitComment = e => {
-      post.addComment({user: 'User', comment, time: '1s ago'});
-      setComment("");
       e.preventDefault();
+
+      if (comment !== '') {
+        post.addComment({ user: uiStore.currentUser, comment, time: '1s ago'});
+        setComment("");
+      }
     };
 
 

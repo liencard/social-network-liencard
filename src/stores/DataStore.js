@@ -4,10 +4,15 @@ configure({ enforceActions: "observed" });
 class DataStore {
   constructor() {
     this.posts = [];
+    this.users = [];
   }
 
   addPost(post) {
     this.posts.push(post);
+  }
+
+  addUser(user) {
+    this.users.push(user);
   }
 
   seed(posts) {
@@ -21,7 +26,9 @@ class DataStore {
 
 decorate(DataStore, {
   posts: observable,
+  users: observable,
   addPost: action,
+  addUser: action,
   seed: action
 });
 

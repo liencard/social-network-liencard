@@ -5,10 +5,14 @@ class UiStore {
         this.currentUser = undefined;
     }
 
+    setCurrentUser(user) {
+        this.currentUser = user;
+    }
 }
 
 decorate(UiStore, {
-    currentUser: observable
+    currentUser: observable,
+    setCurrentUser: action
 });
 
 export default UiStore;

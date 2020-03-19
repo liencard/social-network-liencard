@@ -15,11 +15,11 @@ const Post = ({ post }) => {
           <div className={style.post__header}>
             <img
               className={style.post__avatar}
-              src={post.avatar}
+              src={post.user.avatar}
               alt="profile icon"
             ></img>
             <div className={style.post__header__wrapper}>
-              <p className={style.post__user}>{post.user}</p>
+              <p className={style.post__user}>{post.user.name}</p>
               <p className={style.post__location}><img src="../assets/img/pin.svg" alt="location icon"></img>{post.location}</p>
               <p className={style.post__time}>{post.time}</p>
             </div>
