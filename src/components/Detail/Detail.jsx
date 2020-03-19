@@ -37,10 +37,19 @@ const Detail = () => {
           <img
             className={style.post__picture}
             src={`../${post.picture}`}
-            alt="location"
+            alt="snap of the location"
           ></img>
           <p className={style.post__description}>{post.description}</p>
-          <p className={style.post__tags}>{post.tags}</p>
+          {post.tags ?
+            <ul className={style.post__tags}>
+              {post.tags
+                ? post.tags.map(tag => (
+                  <li className={style.tag} key={tag}>
+                    #{tag}
+                  </li>
+                ))
+                : ''}
+            </ul> : ''}
         </div>
 
         <div className={style.post__bottom}>
@@ -52,10 +61,8 @@ const Detail = () => {
                   : '../assets/img/heart-border.svg'
               })`
             }}
-            className={style.post__like}
-            onClick={() => {
-              post.addLike();
-            }}
+            className={`${style.post__like} ${post.like ? style.liked : style.unlike}`}
+            onClick={() => {post.addLike();}}
           >
             {post.like ? 'Liked' : 'Like'}
           </button>

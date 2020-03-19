@@ -32,6 +32,10 @@
   composes: post__tags from "../../components/Post/Post.module.css";
 }
 
+.tag {
+  margin-right: spacerSmall;
+}
+
 .post__time {
   composes: post__time from "../../components/Post/Post.module.css";
 }

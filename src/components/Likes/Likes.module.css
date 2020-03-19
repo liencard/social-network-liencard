@@ -1,7 +1,11 @@
+@value tokens: "../../styles/tokens.module.css";
+@value spacerMedium from tokens;
+
 .topSpacer {
     margin-top: 6rem;
 }
 
 .list {
-    margin-top: 5rem;
+    margin: spacerMedium;
+    margin-top: 6rem;
 }

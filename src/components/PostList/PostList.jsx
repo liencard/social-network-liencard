@@ -13,7 +13,7 @@ const PostList = () => {
     return useObserver(() => (
       <>
         <Header title={"Travel App"}/>
-        <section className="container">
+        <section className={style.container}>
           <ul className={style.posts}>
             {dataStore.posts.map(post => (
               <Post post={post} key={post.id} />

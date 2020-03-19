@@ -17,16 +17,15 @@ const Likes = () => {
     return useObserver(() => (
       <>
         <Header title={'Likes'} />
-
-        <ul className={style.list}>
-        {posts.length > 0 ? 
-          (
-            posts.map(post => (
-            <Post post={post} key={post.id} />
-                ))
-            )
-          : 'no likes'}
-        </ul> 
+          <ul className={style.list}>
+          {posts.length > 0 ? 
+            (
+              posts.map(post => (
+              <Post post={post} key={post.id} />
+                  ))
+              )
+            : 'no likes'}
+          </ul> 
       </>
     ));
 };

@@ -76,10 +76,10 @@
   background-color: white;
 }
 
-.post--liked {
+.liked {
   color: red;
 }
 
-.post--unlike {
+.unlike {
   color: black;
 }

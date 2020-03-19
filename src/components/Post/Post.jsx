@@ -42,7 +42,6 @@ const Post = ({ post }) => {
                   ))
                 : ''}
             </ul> : ''}
-            {/* <p className={style.post__tags}>{post.tags}</p> */}
           </div>
         </Link>
         <div className={style.post__bottom}>
@@ -54,7 +53,7 @@ const Post = ({ post }) => {
                   : 'assets/img/heart-border.svg'
               })`
             }}
-            className={style.post__like}
+            className={`${style.post__like} ${post.like ? style.liked : style.unlike}`}
             onClick={() => {
               post.addLike();
             }}
