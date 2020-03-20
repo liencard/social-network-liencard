@@ -6,7 +6,7 @@ import style from "./AddPost.module.css";
 
 const FormPost = () => {
  
-  const { dataStore } = useStores();
+  const { dataStore, uiStore } = useStores();
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState('');
   const [tags, setTags] = useState('');
@@ -16,13 +16,13 @@ const FormPost = () => {
     e.preventDefault();
 
     dataStore.addPost(new Post({ 
-        description,
-        user: 'User',
-        picture,
-        location,
-        tags,
-        // avatar: './assets/img/avatar.png',
-        time: '1s ago'
+      id: dataStore.posts.length,
+      description,
+      user: uiStore.currentUser,
+      picture,
+      location,
+      tags,
+      time: '1s ago'
     }));
     setDescription("");
     setLocation('');

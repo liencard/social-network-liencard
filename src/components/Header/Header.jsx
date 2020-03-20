@@ -5,7 +5,7 @@ import style from "./Header.module.css";
 const Header = ({ title }) => {
     return (
         <header className={style.header}>
-            {title !== "Travel App" ? <BackLink /> : ''}
+            {title !== "TripIt" ? <BackLink /> : ''}
             <h2 className={style.title}>{title}</h2>
         </header>
     );

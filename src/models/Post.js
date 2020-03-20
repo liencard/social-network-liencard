@@ -5,8 +5,9 @@ import Comment from "./Comment";
 configure({ enforceActions: "observed" });
 
 class Post {
-  constructor({ description, user, picture, location, tags, time}) {
-    this.id = v4();
+  constructor({ id, description, user, picture, location, tags, time}) {
+    // this.id = v4();
+    this.id = id;
     this.description = description;
     this.user = user;
     this.picture = picture;
@@ -23,7 +24,7 @@ class Post {
   }
 
   addComment(comment) {
-    this.comments.push(new Comment(comment)); // nog timestamp aan linken
+    this.comments.push(new Comment(comment));
   }
 
   get commentsLength() {
@@ -34,8 +35,6 @@ class Post {
 decorate(Post, {
   like: observable,
   comments: observable,
-  commentInput: observable,
-  setComment: action,
   addLike: action,
   addComment: action,
   commentsLength: computed

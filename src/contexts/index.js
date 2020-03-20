@@ -33,6 +33,7 @@ const user4 = new User({
 });
 
 const p1 = new Post({
+    id: '1',
     description:
         'Zon, zee, strand! Morbi nec rutrum magna. Curabitur et malesuada nunc.',
     user: user1,
@@ -43,13 +44,14 @@ const p1 = new Post({
 });
 
 const p2 = new Post({
-  description:
+    id: '2',
+    description:
     'Zonsondergang uit Cyprus. Morbi sed nisl quis urna ornare euismod. Suspendisse sed vestibulum massa.',
-  user: user2,
-  picture: './assets/img/travel2.jpg',
-  location: 'Norway',
-  tags: ['peaceful', 'mountains', 'hiking'],
-  time: '1h ago'
+    user: user2,
+    picture: './assets/img/travel2.jpg',
+    location: 'Norway',
+    tags: ['peaceful', 'mountains', 'hiking'],
+    time: '1h ago'
 });
 
 p1.comments = [
