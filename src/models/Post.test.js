@@ -1,38 +1,49 @@
 import Post from './Post';
 
-test('Check properties van de post', () => {
+test('Create a post', () => {
   const post = new Post({
+    id: '1',
+    user: 'user',
     description: 'Test',
-    user: 1,
     picture: 'image1',
-    location: 'Nederland'});
+    location: 'Country',
+    tags: ['tag1', 'tag2'],
+    time: 'time'});
   expect(post.description).toBe('Test');
-  expect(post.user).toBe(1);
+  expect(post.user).toBe('user');
+  expect(post.id).toBe('1');
   expect(post.picture).toBe('image1');
-  expect(post.location).toBe('Nederland');
+  expect(post.location).toBe('Country');
+  expect(post.time).toBe('time');
 });
 
-test('Check als post geliked is', () => {
+test("post must have a user", () => {
+  expect(() => new Post({ description: "test", user: {} })).toThrow();
+});
+
+test("post must have a picture", () => {
+  expect(() => new Post({ description: "test", picture: {} })).toThrow();
+});
+
+test("post must have a location", () => {
+  expect(() => new Post({ description: "test", location: {} })).toThrow();
+});
+
+test("Post must have a description", () => {
+  expect(() => new Post({ user: {}, picture: {}, location: {} })).toThrow();
+  expect(() => new Post({ description: "", user: {}, picture: {}, location: {} })).toThrow();
+});
+
+test('Check post liked', () => {
   const post = new Post({
+    id: '1',
+    user: 'user',
     description: 'Test',
-    user: 1,
     picture: 'image1',
-    location: 'Nederland'
+    location: 'Country',
+    tags: ['tag1', 'tag2'],
+    time: 'time'
   });
   post.addLike(true);
   expect(post.like).toBe(true);
-});
-
-test('Check als comment wordt toegevoegd', () => {
-  const post = new Post({
-    description: 'Test',
-    user: 1,
-    picture: 'image1',
-    location: 'Nederland'
-  });
-  post.addComment(1, 'Leuke foto');
-  expect(post.comments.length).toBe(1);
-  expect(post.comments[0].user).toBe(1);
-  expect(post.comments[0].comment).toBe('Leuke foto');
-
 });

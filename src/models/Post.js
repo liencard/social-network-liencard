@@ -1,12 +1,23 @@
 import { observable, action, computed, decorate, configure } from "mobx";
-import { v4 } from 'uuid';
 import Comment from "./Comment";
 
 configure({ enforceActions: "observed" });
 
 class Post {
   constructor({ id, description, user, picture, location, tags, time}) {
-    // this.id = v4();
+    if (!user) {
+      throw new Error("A post must have a user");
+    }
+    if (!description || description === "") {
+      throw new Error("A post must have a description");
+    }
+    if (!picture) {
+      throw new Error("A post must have a picture");
+    }
+    if (!location) {
+      throw new Error("A post must have a location");
+    }
+    
     this.id = id;
     this.description = description;
     this.user = user;
@@ -15,7 +26,6 @@ class Post {
     this.tags = tags;
     this.time = time;
     this.like = false;
-    
     this.comments = [];
   }
 

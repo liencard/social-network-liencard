@@ -23,5 +23,5 @@ class User {
         !this.posts.includes(post) && this.posts.push(post);
     }
 }
-
+ 
 export default User;
