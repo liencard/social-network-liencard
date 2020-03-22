@@ -16,7 +16,7 @@ const FormPost = () => {
     e.preventDefault();
 
     dataStore.addPost(new Post({ 
-      id: dataStore.posts.length,
+      id: `${dataStore.posts.length}`,
       description,
       user: uiStore.currentUser,
       picture,

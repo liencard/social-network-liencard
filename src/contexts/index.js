@@ -33,7 +33,7 @@ const user4 = new User({
 });
 
 const p1 = new Post({
-    id: '1',
+    id: '0',
     description:
         'Zon, zee, strand! Morbi nec rutrum magna. Curabitur et malesuada nunc.',
     user: user1,
@@ -44,7 +44,7 @@ const p1 = new Post({
 });
 
 const p2 = new Post({
-    id: '2',
+    id: '1',
     description:
     'Zonsondergang uit Cyprus. Morbi sed nisl quis urna ornare euismod. Suspendisse sed vestibulum massa.',
     user: user2,

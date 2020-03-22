@@ -36,7 +36,7 @@ const Detail = () => {
         <div className={style.post__info}>
           <img
             className={style.post__picture}
-            src={`../${post.picture}`}
+            src={`${post.picture.includes('assets/') ? `../${post.picture}` : post.picture}`} 
             alt="snap of the location"
           ></img>
           <p className={style.post__description}>{post.description}</p>
