@@ -37,7 +37,7 @@
   .list {
     flex-direction: column;
     align-items: flex-start;
-    height: 30rem;
+    height: 20rem;
     background-color: background;
     padding: 1rem;
     margin-top: 7rem;
@@ -53,6 +53,7 @@
   .button svg {
     height: 2rem;
     width: 2rem;
+    margin-top: 2rem;
   }
 
   .button span {

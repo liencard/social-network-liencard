@@ -3,6 +3,7 @@ import { useStores } from "../../hooks";
 import Post from '../../models/Post';
 import Header from '../Header/Header';
 import style from "./AddPost.module.css";
+import { useHistory } from 'react-router-dom';
 
 const FormPost = () => {
  
@@ -11,6 +12,7 @@ const FormPost = () => {
   const [location, setLocation] = useState('');
   const [tags, setTags] = useState('');
   const [picture, setPicture] = useState('assets/travel1.jpg');
+  let history = useHistory();
 
   const handleSubmitPost = e => {
     e.preventDefault();
@@ -28,6 +30,7 @@ const FormPost = () => {
     setLocation('');
     setTags('');
     setPicture('');
+    history.push("/");
   }
 
     const handleSubmitTags = e => {

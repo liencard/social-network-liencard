@@ -9,6 +9,7 @@ import { useObserver } from 'mobx-react-lite';
 import { useParams } from 'react-router-dom';
 import { useStores } from "../../hooks";
 
+
 const Detail = () => {
 
   const { id } = useParams();
@@ -16,8 +17,11 @@ const Detail = () => {
   const post = dataStore.getPostById(id);
 
   return useObserver(() => (
+
     <>
       <Header title={'Detail'} />
+
+      
 
       <li key={id} className={style.post}>
         <div className={style.post__header}>
