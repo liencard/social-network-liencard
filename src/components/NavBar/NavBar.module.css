@@ -1,5 +1,5 @@
 @value tokens: "../../styles/tokens.module.css";
-@value spacerSmall, spacerMedium from tokens;
+@value spacerSmall, spacerMedium, background from tokens;
 
 .list {
   display: flex;
@@ -16,10 +16,51 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  height: 2rem;
-  width: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
 }
 
 .active {
   color: purple;
+}
+
+.hidden__mobile {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+
+  .nav {
+    height: 100vh;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 30rem;
+    background-color: background;
+    padding: 1rem;
+    margin-top: 7rem;
+  }
+
+  .button {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .button svg {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .button span {
+    margin-left: 1rem;
+  }
+
+  .hidden__mobile {
+    display: inline;
+  }
+
 }

@@ -1,5 +1,5 @@
 @value tokens: "../../styles/tokens.module.css";
-@value spacerSmall, spacerMedium, spacerBig, spacerLarge, fontSizeMedium, colorPrimary from tokens;
+@value spacerSmall, spacerMedium, spacerBig, spacerLarge, fontSizeMedium, colorPrimary, background from tokens;
 
 .post {
   composes: post from "../../styles/components.module.css";
@@ -63,4 +63,12 @@
 
 .post__comment {
   composes: post__comment from "../../components/Post/Post.module.css";
+}
+
+@media screen and (min-width: 800px) {
+
+  .post {
+    background-color: background;
+  }
+
 }

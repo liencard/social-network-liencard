@@ -12,26 +12,26 @@ const NavBar = () => {
       <ul className={style.list}>
         <li>
           <NavLink className={style.button} activeClassName={style.active} to="/">
-            <HomeLogo fill="currentColor" />
-            <span className="hidden">Home</span>
+            <HomeLogo />
+            <span className={style.hidden__mobile}>Home</span>
           </NavLink>
         </li>
         <li>
           <NavLink className={style.button} activeClassName={style.active} to="/search">
-            <SearchLogo fill="currentColor" />
-            <span className="hidden">Search</span>
+            <SearchLogo />
+            <span className={style.hidden__mobile}>Search</span>
           </NavLink>
         </li>
         <li>
           <NavLink className={style.button} activeClassName={style.active} to="/likes">
             <LikesLogo fill="currentColor" />
-            <span className="hidden">Likes</span>
+            <span className={style.hidden__mobile}>Likes</span>
           </NavLink>
         </li>
         <li>
           <NavLink className={style.button} activeClassName={style.active} to="/me">
             <ProfileLogo fill="currentColor" />
-            <span className="hidden">Profile</span>
+            <span className={style.hidden__mobile}>Profile</span>
           </NavLink>
         </li>
       </ul>

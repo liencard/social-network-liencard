@@ -25,3 +25,11 @@
     text-align: center;
     grid-column: 2;
  }
+
+ @media screen and (min-width: 800px) {
+
+  .header{
+     width: 40%;
+  }
+
+}

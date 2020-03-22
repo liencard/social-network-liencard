@@ -1,5 +1,18 @@
 @value tokens: "./tokens.module.css";
-@value spacerLarge from tokens;
+@value spacerMedium from tokens;
 
 
+.container {
+    margin: spacerMedium;
+}
+
+.grid {
+    display: grid;
+}
+
+
+
+/* .container {
+  composes: full from "../../styles/layouts.module.css";
+} */
 

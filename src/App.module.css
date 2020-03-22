@@ -1,3 +1,6 @@
+@value tokens: "./styles/tokens.module.css";
+@value spacerSmall, spacerMedium, colorPrimary from tokens;
+
 .app {
   display: grid;
   grid-template-rows: 1fr 4rem;
@@ -8,4 +11,33 @@
 .content {
   grid-area: content;
   overflow-y: scroll;
+}
+
+
+@media screen and (min-width: 800px) {
+
+  .purplebox {
+    background-color: colorPrimary;
+    height: 5rem;
+    width: 100vw;
+  }
+
+  .app {
+    grid-template-rows: 1fr;
+    /* grid-template-rows: 5rem 1fr; */
+    grid-template-columns: auto 10vw 40vw auto;
+    grid-template-areas: "nav" "content";
+    margin-top: -5rem;
+  }
+
+  .nav {
+    grid-column: 2;
+
+  }
+
+  .content {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
 }

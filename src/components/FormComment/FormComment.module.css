@@ -8,4 +8,5 @@
 
 .form__button {
   composes: form__button from "../../styles/components.module.css";
+  background-color: transparent;
 }

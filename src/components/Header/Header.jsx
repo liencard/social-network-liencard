@@ -1,8 +1,16 @@
 import React from "react";
 import BackLink from '../BackLink/BackLink';
 import style from "./Header.module.css";
+import { useParams } from 'react-router-dom';
 
-const Header = ({ title }) => {
+const Header = ({title}) => {
+
+    // const { title, search } = useParams();
+    // console.log(title);
+
+    //const { search } = useParams();
+    //console.log(search + 'test');
+
     return (
         <header className={style.header}>
             {title !== "TripIt" ? <BackLink /> : ''}
