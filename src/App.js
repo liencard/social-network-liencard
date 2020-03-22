@@ -7,7 +7,6 @@ import Profile from "./components/Profile/Profile";
 import NavBar from './components/NavBar/NavBar';
 import AddButton from './components/AddButton/AddButton';
 import AddPost from './components/AddPost/AddPost';
-import Header from './components/Header/Header';
 
 import { Switch, Route} from 'react-router-dom';
 import { ROUTES } from './const/index';
@@ -19,9 +18,6 @@ function App() {
       <div className={style.purplebox}></div>
       <div className={style.app}>
 
-      {/* <Header title={'TripIt'} /> */}
-      {/* <Header /> */}
-        
           <div className={style.content}>
             <Switch>
               <Route path={ROUTES.postDetail.path}>
@@ -39,7 +35,7 @@ function App() {
               <Route path={ROUTES.addpost}>
                 <AddPost />
               </Route>
-              <Route title={'TripIt'} exact path={ROUTES.home}>
+              <Route exact path={ROUTES.home}>
                 <PostList />
               </Route>
               <Route>
