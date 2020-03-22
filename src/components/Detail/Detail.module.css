@@ -50,12 +50,17 @@
 
 .post__like {
   composes: post__like from "../../components/Post/Post.module.css";
+  background-color: transparent;
 }
 
-.post--liked {
-  composes: post--liked from "../../components/Post/Post.module.css";
+.liked {
+  composes: liked from "../../components/Post/Post.module.css";
 }
 
-.post--unlike {
-  composes: post--unlike from "../../components/Post/Post.module.css";
+.unlike {
+  composes: unlike from "../../components/Post/Post.module.css";
+}
+
+.post__comment {
+  composes: post__comment from "../../components/Post/Post.module.css";
 }

@@ -66,7 +66,7 @@ const Detail = () => {
           >
             {post.like ? 'Liked' : 'Like'}
           </button>
-          <button className={style.post_comment}>
+          <button className={style.post__comment}>
             <span className={style.commentAmount}>{post.commentsLength}</span>{' '}
             Comments
           </button>

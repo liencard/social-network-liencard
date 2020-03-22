@@ -83,3 +83,8 @@
 .unlike {
   color: black;
 }
+
+.post__comment {
+  border: none;
+  background-color: transparent;
+}

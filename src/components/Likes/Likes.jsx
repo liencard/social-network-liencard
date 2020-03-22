@@ -24,7 +24,7 @@ const Likes = () => {
               <Post post={post} key={post.id} />
                   ))
               )
-            : 'no likes'}
+            : 'You have not liked any posts'}
           </ul> 
       </>
     ));

@@ -17,6 +17,8 @@
     justify-self: left;
     color: white;
     padding-left: 0;
+    background-color: transparent;
+    border: none;
  }
 
  .title {
